@@ -24,10 +24,14 @@ func (circ Circle) Area() float64 {
     return Pi * circ.radius * circ.radius
 }
 
+func Calculate(sh Shape) {
+    fmt.Println("Area: ", sh.Area())
+}
+
 func main() {
     rectangle := Rectangle{width: 20, height: 12}
     circle := Circle{radius: 5}
 
-    fmt.Println("Area of Rectangle: ", rectangle.Area())
-    fmt.Println("Area of Circle: ", circle.Area())
+    Calculate(rectangle)
+    Calculate(circle)
 }
